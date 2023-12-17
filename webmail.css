@@ -275,10 +275,14 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 .popup p {
 	font-size: 50px;
 }
+.popup a {
+	color: #fff;
+	text-decoration: none;
+
+}
 button a {
 	color: initial;
 	color: #fff;
-}
-button a:hover {
-	color: initial;
+	text-decoration: none;
+
 }

