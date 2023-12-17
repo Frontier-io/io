@@ -17,3 +17,5 @@ $(window).resize(function (e) {
   $(".footer_area ul").removeAttr('style');
   browser_width = $(window).width();
 });
+
+
